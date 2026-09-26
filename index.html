@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="uz" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingliz Tili & IELTS Kurslariga Ro'yxatdan O'tish</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #1e1b4b, #0f172a, #020617);
+            min-height: 100vh;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect {
+            box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.3);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .step-transition {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="text-slate-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+
+    <div class="w-full max-w-xl mx-auto">
+        <!-- Header / Brand info -->
+        <div class="text-center mb-8 animate-float">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-600/30 border border-indigo-500/30 text-indigo-400 text-2xl mb-4 glow-effect">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-300 via-white to-indigo-200 bg-clip-text text-transparent">
+                Professional Ingliz Tili & IELTS
+            </h1>
+            <p class="text-sm text-slate-400 mt-2">8, 9, 10 va 11-sinf o'quvchilari uchun maxsus tayyorlov kurslari</p>
+        </div>
+
+        <!-- Multi-Step Form Card -->
+        <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden glow-effect">
+            
+            <!-- Progress Bar -->
+            <div class="w-full bg-slate-800/80 rounded-full h-2 mb-8 overflow-hidden">
+                <div id="progress-bar" class="bg-gradient-to-r from-indigo-500 to-purple-500 h-full w-1/5 transition-all duration-500 rounded-full"></div>
+            </div>
+
+            <div id="step-1" class="step-content space-y-6">
+                <div class="text-center space-y-3">
+                    <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                        ✨ Maxsus Qabul 2026
+                    </span>
+                    <h2 class="text-3xl font-bold tracking-tight text-white">Assalomu alaykum! 👋</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                        Kelajagingizni o'zgartiring! IELTS va CEFR sertifikatlarini qo'lga kiritish va nufuzli OTMlarga grant asosida kirish uchun hoziroq ro'yxatdan o'ting.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/40 border border-slate-700/50 rounded-2xl p-4 space-y-3 text-sm text-slate-300">
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-indigo-400"></i>
+                        <span>Tajribali va xalqaro sertifikatli ustozlar</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <i class="fa-solid fa-circle-check text-indigo-400"></i>
+                        <span>Natija kafolatlangan maxsus metodika</span>
+                    </div>
+                </div>
+
+                <button onclick="nextStep(2)" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold shadow-lg shadow-indigo-500/25 transition-all duration-300 transform active:scale-[0.98] flex items-center justify-center space-x-2">
+                    <span>Boshlash</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div id="step-2" class="step-content hidden space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-2xl font-bold text-white">Qaysi maqsadni ko'zlayapsiz?</h2>
+                    <p class="text-slate-400 text-sm">O'zingizga kerakli yo'nalishni tanlang</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-3">
+                    <label class="certificate-card cursor-pointer group relative flex items-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
+                        <input type="radio" name="certificate" value="IELTS" class="hidden peer">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 peer-checked:bg-indigo-600 text-indigo-400 peer-checked:text-white flex items-center justify-center text-xl transition-all mr-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-white group-hover:text-indigo-300 transition-colors">IELTS Tayyorlik</h3>
+                            <p class="text-xs text-slate-400">7.0+ ballni maqsad qilganlar uchun</p>
+                        </div>
+                        <div class="w-6 h-6 rounded-full border-2 border-slate-600 peer-checked:border-indigo-500 peer-checked:bg-indigo-500 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100"></i>
+                        </div>
+                    </label>
+
+                    <label class="certificate-card cursor-pointer group relative flex items-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
+                        <input type="radio" name="certificate" value="CEFR" class="hidden peer">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 peer-checked:bg-indigo-600 text-indigo-400 peer-checked:text-white flex items-center justify-center text-xl transition-all mr-4">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-white group-hover:text-indigo-300 transition-colors">CEFR (B2 / C1)</h3>
+                            <p class="text-xs text-slate-400">Milliy sertifikat va imtiyozlar uchun</p>
+                        </div>
+                        <div class="w-6 h-6 rounded-full border-2 border-slate-600 peer-checked:border-indigo-500 peer-checked:bg-indigo-500 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100"></i>
+                        </div>
+                    </label>
+
+                    <label class="certificate-card cursor-pointer group relative flex items-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
+                        <input type="radio" name="certificate" value="General English + IELTS" class="hidden peer">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 peer-checked:bg-indigo-600 text-indigo-400 peer-checked:text-white flex items-center justify-center text-xl transition-all mr-4">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-white group-hover:text-indigo-300 transition-colors">General English + IELTS</h3>
+                            <p class="text-xs text-slate-400">Noldan boshlab o'rganish uchun</p>
+                        </div>
+                        <div class="w-6 h-6 rounded-full border-2 border-slate-600 peer-checked:border-indigo-500 peer-checked:bg-indigo-500 flex items-center justify-center text-white text-xs">
+                            <i class="fa-solid fa-check opacity-0 peer-checked:opacity-100"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div id="error-step-2" class="text-rose-400 text-xs text-center hidden">Iltimos, yo'nalishlardan birini tanlang!</div>
+
+                <div class="flex space-x-3">
+                    <button onclick="prevStep(1)" class="w-1/3 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium transition-all">
+                        Orqaga
+                    </button>
+                    <button onclick="validateStep2()" class="w-2/3 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/20 transition-all">
+                        Davom etish
+                    </button>
+                </div>
+            </div>
+
+            <div id="step-3" class="step-content hidden space-y-6">
+                <div class="text-center space-y-2">
+                    <h2 class="text-2xl font-bold text-white">Nechinchi sinf o'quvchisiz?</h2>
+                    <p class="text-slate-400 text-sm">Kurslarimiz 8, 9, 10 va 11-sinf o'quvchilari uchun mo'ljallangan</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="grade-card cursor-pointer flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all group">
+                        <input type="radio" name="grade" value="8-sinf" class="hidden peer">
+                        <span class="text-2xl font-bold text-white group-hover:text-indigo-300 peer-checked:text-indigo-400">8-sinf</span>
+                        <span class="text-xs text-slate-400 mt-1">13-14 yosh</span>
+                    </label>
+                    <label class="grade-card cursor-pointer flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all group">
+                        <input type="radio" name="grade" value="9-sinf" class="hidden peer">
+                        <span class="text-2xl font-bold text-white group-hover:text-indigo-300 peer-checked:text-indigo-400">9-sinf</span>
+                        <span class="text-xs text-slate-400 mt-1">14-15 yosh</span>
+                    </label>
+                    <label class="grade-card cursor-pointer flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all group">
+                        <input type="radio" name="grade" value="10-sinf" class="hidden peer">
+                        <span class="text-2xl font-bold text-white group-hover:text-indigo-300 peer-checked:text-indigo-400">10-sinf</span>
+                        <span class="text-xs text-slate-400 mt-1">15-16 yosh</span>
+                    </label>
+                    <label class="grade-card cursor-pointer flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-800/50 border border-slate-700 hover:border-indigo-500 transition-all group">
+                        <input type="radio" name="grade" value="11-sinf" class="hidden peer">
+                        <span class="text-2xl font-bold text-white group-hover:text-indigo-300 peer-checked:text-indigo-400">11-sinf</span>
+                        <span class="text-xs text-slate-400 mt-1">16-17 yosh</span>
+                    </label>
+                </div>
+
+                <div id="error-step-3" class="text-rose-400 text-xs text-center hidden">Iltimos, sinfingizni tanlang!</div>
+
+                <div class="flex space-x-3">
+                    <button onclick="prevStep(2)" class="w-1/3 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium transition-all">
+                        Orqaga
+                    </button>
+                    <button onclick="validateStep3()" class="w-2/3 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-600/20 transition-all">
+                        Davom etish
+                    </button>
+                </div>
+            </div>
+
+            <div id="step-4" class="step-content hidden space-y-4">
+                <div class="text-center space-y-1">
+                    <h2 class="text-2xl font-bold text-white">Shaxsiy ma'lumotlar</h2>
+                    <p class="text-slate-400 text-sm">Siz bilan bog'lanishimiz uchun ma'lumotlarni kiriting</p>
+                </div>
+
+                <form id="registration-form" onsubmit="submitForm(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Ism va Familiyangiz</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" id="fullname" required placeholder="Masalan: Alisher Valiyev" class="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-all text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Hozirgi Ingliz Tili Darajangiz</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </span>
+                            <select id="english-level" required class="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-all text-sm appearance-none">
+                                <option value="" disabled selected>Darajangizni tanlang</option>
+                                <option value="Boshlang'ich (Beginner)">Boshlang'ich (Beginner)</option>
+                                <option value="Elementary">Elementary</option>
+                                <option value="Pre-Intermediate">Pre-Intermediate</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Upper-Intermediate">Upper-Intermediate</option>
+                            </select>
+                            <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-500 pointer-events-none">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Telefon Raqamingiz</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <input type="tel" id="phone" required placeholder="+998 90 123 45 67" value="+998 " class="w-full pl-10 pr-4 py-3 bg-slate-800/60 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-all text-sm">
+                        </div>
+                    </div>
+
+                    <div id="error-step-4" class="text-rose-400 text-xs text-center hidden">Barcha maydonlarni to'g'ri to'ldiring!</div>
+
+                    <div class="flex space-x-3 pt-2">
+                        <button type="button" onclick="prevStep(3)" class="w-1/3 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium transition-all">
+                            Orqaga
+                        </button>
+                        <button type="submit" id="submit-btn" class="w-2/3 py-3 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold shadow-lg shadow-indigo-600/20 transition-all flex items-center justify-center space-x-2">
+                            <span id="btn-text">Yuborish</span>
+                            <i id="btn-spinner" class="fa-solid fa-spinner fa-spin hidden"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="step-5" class="step-content hidden text-center space-y-6 py-4">
+                <div class="w-20 h-20 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center text-3xl mx-auto shadow-lg shadow-emerald-500/20 animate-bounce">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div class="space-y-2">
+                    <h2 class="text-2xl font-bold text-white">Muvaffaqiyatli Yuborildi! 🎉</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed max-w-sm mx-auto">
+                        Ma'lumotlaringiz ustozimizning Telegram botiga muvaffaqiyatli yetkazildi. Tez orada siz bilan bog'lanishadi!
+                    </p>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-4 text-xs text-slate-400 space-y-1">
+                    <p><strong class="text-slate-300">Yo'nalish:</strong> <span id="res-cert">---</span></p>
+                    <p><strong class="text-slate-300">Sinf:</strong> <span id="res-grade">---</span></p>
+                    <p><strong class="text-slate-300">Ism:</strong> <span id="res-name">---</span></p>
+                </div>
+                <button onclick="resetForm()" class="w-full py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium transition-all text-sm">
+                    Yana ro'yxatdan o'tish
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Footer credit -->
+        <div class="text-center mt-6 text-xs text-slate-500">
+            Powered with ❤️ for English Teachers & Students
+        </div>
+    </div>
+
+    <script>
+        // TELEGRAM BOT CONFIGURATION SECTION
+        // Replace with your actual Telegram Bot Token and Chat ID
+        const BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"; 
+        const CHAT_ID = "YOUR_CHAT_ID_HERE";
+
+        // Form state data object
+        let formData = {
+            certificate: "",
+            grade: "",
+            fullname: "",
+            level: "",
+            phone: ""
+        };
+
+        // Navigation between steps
+        function showStep(stepNumber) {
+            document.querySelectorAll('.step-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`step-${stepNumber}`).classList.remove('hidden');
+            
+            // Update progress bar width
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercentages = { 1: '20%', 2: '40%', 3: '60%', 4: '80%', 5: '100%' };
+            progressBar.style.width = progressPercentages[stepNumber];
+        }
+
+        function nextStep(step) {
+            showStep(step);
+        }
+
+        function prevStep(step) {
+            showStep(step);
+        }
+
+        // Validate Step 2 (Certificate Selection)
+        function validateStep2() {
+            const selectedCert = document.querySelector('input[name="certificate"]:checked');
+            const errorEl = document.getElementById('error-step-2');
+            
+            if (!selectedCert) {
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            errorEl.classList.add('hidden');
+            formData.certificate = selectedCert.value;
+            nextStep(3);
+        }
+
+        // Validate Step 3 (Grade Selection)
+        function validateStep3() {
+            const selectedGrade = document.querySelector('input[name="grade"]:checked');
+            const errorEl = document.getElementById('error-step-3');
+
+            if (!selectedGrade) {
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            errorEl.classList.add('hidden');
+            formData.grade = selectedGrade.value;
+            nextStep(4);
+        }
+
+        // Handle Form Submission and Telegram API integration
+        async function submitForm(e) {
+            e.preventDefault();
+            
+            const fullnameInput = document.getElementById('fullname').value.trim();
+            const levelInput = document.getElementById('english-level').value;
+            const phoneInput = document.getElementById('phone').value.trim();
+            const errorEl = document.getElementById('error-step-4');
+
+            if (!fullnameInput || !levelInput || !phoneInput) {
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            errorEl.classList.add('hidden');
+
+            formData.fullname = fullnameInput;
+            formData.level = levelInput;
+            formData.phone = phoneInput;
+
+            // UI Loading state
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnSpinner = document.getElementById('btn-spinner');
+
+            submitBtn.disabled = true;
+            btnText.textContent = "Yuborilmoqda...";
+            btnSpinner.classList.remove('hidden');
+
+            // Construct well-formatted Telegram message text
+            const message = `🎯 Yangi o'quvchi ro'yxatdan o'tdi!\n\n` +
+                            `🎓 Maqsad: ${formData.certificate}\n` +
+                            `🏫 Sinf: ${formData.grade}\n` +
+                            `👤 F.I.Sh: ${formData.fullname}\n` +
+                            `📊 Darajasi: ${formData.level}\n` +
+                            `📞 Telefon: ${formData.phone}\n\n` +
+                            `⏰ Vaqt: ${new Date().toLocaleString('uz-UZ')}`;
+
+            try {
+                // Check if tokens are default placeholders
+                if (BOT_TOKEN === "YOUR_BOT_TOKEN_HERE" || CHAT_ID === "YOUR_CHAT_ID_HERE") {
+                    console.warn("Telegram BOT_TOKEN or CHAT_ID are not configured yet. Simulating success response.");
+                    await new Promise(resolve => setTimeout(resolve, 1000)); // simulate network delay
+                } else {
+                    const response = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            chat_id: CHAT_ID,
+                            text: message,
+                            parse_mode: 'HTML'
+                        })
+                    });
+
+                    const result = await response.json();
+                    if (!result.ok) {
+                        throw new Error(result.description || "Telegram API error");
+                    }
+                }
+
+                // Populate success screen summary
+                document.getElementById('res-cert').textContent = formData.certificate;
+                document.getElementById('res-grade').textContent = formData.grade;
+                document.getElementById('res-name').textContent = formData.fullname;
+
+                nextStep(5);
+
+            } catch (err) {
+                console.error("Submission failed:", err);
+                alert("Xatolik yuz berdi. Iltimos, internet aloqasini tekshiring yoki qaytadan urining.");
+            } finally {
+                submitBtn.disabled = false;
+                btnText.textContent = "Yuborish";
+                btnSpinner.classList.add('hidden');
+            }
+        }
+
+        // Reset form to initial state
+        function resetForm() {
+            document.getElementById('registration-form').reset();
+            document.querySelectorAll('input[type="radio"]').forEach(el => el.checked = false);
+            formData = { certificate: "", grade: "", fullname: "", level: "", phone: "" };
+            showStep(1);
+        }
+
+        // Visual selection styling for radio card groups
+        document.querySelectorAll('.certificate-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.certificate-card').forEach(c => c.classList.remove('border-indigo-500', 'bg-indigo-950/20'));
+                this.classList.add('border-indigo-500', 'bg-indigo-950/20');
+            });
+        });
+
+        document.querySelectorAll('.grade-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.grade-card').forEach(c => c.classList.remove('border-indigo-500', 'bg-indigo-950/20'));
+                this.classList.add('border-indigo-500', 'bg-indigo-950/20');
+            });
+        });
+    </script>
+</body>
+</html>
